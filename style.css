@@ -269,13 +269,17 @@ a, button {
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    position: relative;
+    width: 28px;
+    height: 20px;
+    z-index: 1001;
 }
 
 .menu-toggle span {
     width: 24px;
     height: 2px;
     background: var(--text-primary);
-    transition: 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.3s ease;
 }
 
 /* MOBILE */

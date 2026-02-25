@@ -14,8 +14,26 @@ window.addEventListener("scroll", () => {
 });
 
 // Mobile toggle
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // prevent bubbling to document
   navLinks.classList.toggle("active");
+});
+
+/* Close when clicking any nav link */
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+/* Close when clicking outside navLinks */
+document.addEventListener("click", (e) => {
+  const isClickInsideMenu = navLinks.contains(e.target);
+  const isClickOnToggle = menuToggle.contains(e.target);
+
+  if (!isClickInsideMenu && !isClickOnToggle) {
+    navLinks.classList.remove("active");
+  }
 });
 
 // Active link detection
@@ -36,7 +54,6 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(section => observer.observe(section));
-
 
 
 
