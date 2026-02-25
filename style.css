@@ -72,7 +72,7 @@ body > * {
 }
 
 .side-socials li {
-  margin: 18px 0;
+  margin: 25px 0;
 }
 
 .side-socials a,
@@ -850,7 +850,7 @@ p {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 80px 60px;
 }
 
@@ -867,7 +867,7 @@ p {
 
 .project-image {
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 5px;
     background: var(--surface);
     display: flex;
     gap: 20px;
@@ -875,7 +875,7 @@ p {
 }
 
 .project-image img {
-    width: 100%;
+    width: 30%;
     display: block;
     transition: transform 0.6s ease;
 }
@@ -954,6 +954,10 @@ p {
         flex-direction: column;
         gap: 40px;
     }
+
+    .project-image img {
+        width: 60%;
+    }
 }
 
 
@@ -1022,6 +1026,48 @@ p {
     }
 }
 
+/* =========================
+   CONTACT ICON LINKS
+========================= */
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateX(6px);
+    color: #ffffff;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 18px;
+    height: 18px;
+    color: var(--text-muted);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link:hover .icon svg {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 20px !important;
+    height: 20px !important;
+}
+
 
 
 
@@ -1053,3 +1099,56 @@ p {
 
 
 
+
+/* =========================
+   IMAGE PREVIEW MODAL
+========================= */
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.85); /* dark blue transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+}
+
+.image-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-modal-content {
+    max-width: 70%;
+    max-height: 70%;
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.image-modal.active .image-modal-content {
+    transform: scale(1);
+}
+
+.image-modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    cursor: zoom-out;
+}
+
+/* Disable scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .image-modal-content {
+        max-width: 90%;
+        max-height: 100%;
+    }
+}

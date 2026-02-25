@@ -137,3 +137,41 @@ anchorLinks.forEach(link => {
     }
   });
 });
+
+
+
+// =============================
+// IMAGE PREVIEW SYSTEM
+// =============================
+
+const previewImages = document.querySelectorAll(".preview-image");
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+
+previewImages.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImage.src = img.src;
+    document.body.classList.add("modal-open");
+  });
+});
+
+// Close when clicking outside image
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// Close with ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  modal.classList.remove("active");
+  document.body.classList.remove("modal-open");
+  modalImage.src = "";
+}
