@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Page Not Found — Emmanuel Onyekachi</title>
+<meta name="description" content="The page you're looking for doesn't exist. Head back to Emmanuel Onyekachi's portfolio.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0f1117">
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<!-- Same theme bootstrap as the main page so 404 respects the visitor's choice -->
+<script>
+(function() {
+    try {
+        var saved = localStorage.getItem('theme');
+        var preferred = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (preferred === 'light') document.documentElement.classList.add('theme-light');
+    } catch (e) {}
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+    /* Local-only styles for the 404 layout — keeps the global stylesheet untouched */
+    .err-page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 80px 24px;
+        position: relative;
+        text-align: center;
+    }
+
+    .err-content {
+        max-width: 560px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .err-code {
+        font-family: 'JetBrains Mono', 'SF Mono', monospace;
+        font-size: clamp(5rem, 18vw, 10rem);
+        font-weight: 400;
+        line-height: 1;
+        color: var(--accent);
+        letter-spacing: -0.04em;
+        margin-bottom: 8px;
+    }
+
+    .err-tagline {
+        font-family: 'JetBrains Mono', 'SF Mono', monospace;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--text-muted);
+        margin-bottom: 32px;
+    }
+
+    .err-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        font-weight: 600;
+        margin-bottom: 18px;
+        color: var(--text-primary);
+        line-height: 1.3;
+    }
+
+    .err-body {
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin: 0 auto 40px;
+        max-width: 480px;
+    }
+
+    .err-actions {
+        display: inline-flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Reuse a softer version of the orb for visual consistency with the hero */
+    .err-page::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, rgba(var(--accent-rgb), 0.12) 0%, transparent 70%);
+        filter: blur(80px);
+        z-index: 0;
+        pointer-events: none;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Subtle Grain Overlay (same as main page) -->
+    <svg class="grain-overlay" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <filter id="grainFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grainFilter)" />
+    </svg>
+
+    <main class="err-page">
+        <div class="err-content">
+
+            <p class="err-code" aria-label="Error 404">404</p>
+            <p class="err-tagline">Page not found</p>
+
+            <h1 class="err-title">This page took the day off.</h1>
+            <p class="err-body">
+                The page you're after doesn't exist (or it moved without telling me).
+                Either way &mdash; nothing's broken, you just took a wrong turn.
+                Let's get you somewhere useful.
+            </p>
+
+            <div class="err-actions">
+                <a href="/" class="btn-primary">Back to Portfolio</a>
+                <a href="/#contact" class="btn-outline">Get in Touch</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

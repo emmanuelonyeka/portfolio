@@ -3,16 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emmanuel Onyekachi | Front End Web Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Primary Meta Tags -->
+<title>Emmanuel Onyekachi — Front End Web Developer | Building Refined Web Experiences</title>
+<meta name="title" content="Emmanuel Onyekachi — Front End Web Developer">
+<meta name="description" content="Nigerian-based Front End Developer building modern, fully responsive, high-performance web experiences with clean architecture, refined motion, and precise attention to detail. Available for freelance work.">
+<meta name="author" content="Emmanuel Onyekachi">
+<meta name="keywords" content="Frontend Developer, Web Developer, Nigeria, React, JavaScript, HTML, CSS, Freelance Developer, UI Engineer, Lagos">
+<meta name="theme-color" content="#0f1117">
+
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://emmanuelonyekachi.com/">
+<meta property="og:title" content="Emmanuel Onyekachi — Front End Web Developer">
+<meta property="og:description" content="I design and build modern, fully responsive, high-performance web experiences engineered with clean architecture, refined motion, and precise attention to detail.">
+<meta property="og:image" content="https://emmanuelonyekachi.com/images/og-image.jpg">
+<meta property="og:image:alt" content="Emmanuel Onyekachi — Front End Web Developer Portfolio">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://emmanuelonyekachi.com/">
+<meta name="twitter:title" content="Emmanuel Onyekachi — Front End Web Developer">
+<meta name="twitter:description" content="I design and build modern, fully responsive, high-performance web experiences engineered with clean architecture, refined motion, and precise attention to detail.">
+<meta name="twitter:image" content="https://emmanuelonyekachi.com/images/og-image.jpg">
+<meta name="twitter:creator" content="@emmmybills">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://emmanuelonyekachi.com/">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Theme bootstrap — must run before <body> paints to avoid a flash of dark/light -->
+<script>
+(function() {
+    try {
+        var saved = localStorage.getItem('theme');
+        var preferred = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (preferred === 'light') {
+            document.documentElement.classList.add('theme-light');
+        }
+    } catch (e) { /* localStorage may be blocked; default to dark */ }
+})();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Structured Data: Person schema for richer Google results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Emmanuel Onyekachi",
+  "url": "https://emmanuelonyekachi.com/",
+  "image": "https://emmanuelonyekachi.com/images/IMG_0659.jpg",
+  "jobTitle": "Front End Web Developer",
+  "description": "Nigerian-based Front End Developer building modern, fully responsive, high-performance web experiences.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "NG"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/emmanuelymb/",
+    "https://x.com/emmmybills"
+  ],
+  "knowsAbout": ["Front End Development", "Web Design", "JavaScript", "HTML", "CSS", "React"]
+}
+</script>
 </head>
 
 <body>
 
+    <!-- Skip link for keyboard and screen reader users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Custom cursor — hidden on touch devices via CSS -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
     <!-- Subtle Grain Overlay -->
-    <svg class="grain-overlay" xmlns="http://www.w3.org/2000/svg">
+    <svg class="grain-overlay" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <filter id="grainFilter">
         <feTurbulence type="fractalNoise"
                         baseFrequency="0.8"
@@ -24,40 +106,40 @@
 
 
     <!-- LEFT SOCIALS -->
-    <div class="side-socials">
+    <nav class="side-socials" aria-label="Social media links">
       <ul>
-        <li><a href="#" target="_blank" aria-label="GitHub">
+        <li><a href="https://github.com/emmanuelonyeka" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
           <!-- GitHub SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
           </svg>
         </a></li>
 
-        <li><a href="https://x.com/emmmybills?s=21" target="_blank" aria-label="Twitter">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+        <li><a href="https://x.com/emmmybills?s=21" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M18.9 1H22l-7.6 8.7L23 23h-6.9l-5.4-7.1L4.7 23H1.6l8.1-9.3L1 1h7l5 6.6L18.9 1z"/>
           </svg>
         </a></li>
 
-        <li><a href="https://www.linkedin.com/in/emmanuelymb/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+        <li><a href="https://www.linkedin.com/in/emmanuelymb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M4.98 3.5C4.98 5 3.87 6.1 2.5 6.1S0 5 0 3.5 1.1.9 2.5.9 4.98 2 4.98 3.5zM.4 8.1h4.2V24H.4zM8.4 8.1h4v2.2h.06c.56-1 1.94-2.2 4-2.2 4.28 0 5.07 2.82 5.07 6.5V24h-4.2v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V24H8.4z"/>
           </svg>
         </a></li>
 
-        <li><a href="https://wa.me/2348169269415" target="_blank" aria-label="Whatsapp">
-          <svg viewBox="0 0 24 24" class="whatsapp-icon" fill="currentColor">
+        <li><a href="https://wa.me/2348169269415" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" class="whatsapp-icon" fill="currentColor" aria-hidden="true">
             <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20zm4.48-5.69c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.57.12-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.1-.5.1-.1.25-.27.37-.4.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
           </svg>
         </a></li>
       </ul>
-      <div class="social-line"></div>
-    </div>
+      <div class="social-line" aria-hidden="true"></div>
+    </nav>
 
     <!-- RIGHT EMAIL -->
     <div class="side-email">
       <a href="mailto:emmanuelymb@gmail.com">emmanuelymb@gmail.com</a>
-      <div class="email-line"></div>
+      <div class="email-line" aria-hidden="true"></div>
     </div>
 
 
@@ -74,22 +156,42 @@
             </div>
 
             <div class="nav-right">
-                <nav class="nav-links" id="navLinks">
+                <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
                     <a href="#about" class="nav-link"><span class="number">01. </span>About</a>
-                    <a href="#services" class="nav-link"><span class="number">02. </span>Services</a>
-                    <a href="#projects" class="nav-link"><span class="number">03. </span>Projects</a>
-                    <a href="#contact" class="nav-link"><span class="number">04. </span>Contact</a>
+                    <a href="#skills" class="nav-link"><span class="number">02. </span>Skills</a>
+                    <a href="#projects" class="nav-link"><span class="number">03. </span>Work</a>
+                    <a href="#process" class="nav-link"><span class="number">04. </span>Process</a>
+                    <a href="#pricing" class="nav-link"><span class="number">05. </span>Pricing</a>
+                    <a href="#contact" class="nav-link"><span class="number">06. </span>Contact</a>
                 </nav>
 
             
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+                    <!-- Two icons; CSS shows whichever matches the current theme -->
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="Emmanuel-Onyekachi-Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn" aria-label="Download resume (PDF)">
+                    Resume
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </a>
                 <a href="#contact" class="cta-btn" id="ctaBtn">
-                    Work With Me
+                    Start a Project
                 </a>
 
-                <div class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-controls="navLinks" aria-expanded="false">
                     <span></span>
                     <span class="second-toggle"></span>
-                </div>
+                </button>
             </div>
 
         </div>
@@ -99,29 +201,51 @@
     </header>
 
 
-    <section class="hero">
+    <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-name">
+
+        <!-- Animated background — single soft orb that drifts behind hero. Decorative. -->
+        <div class="hero-bg-orb" aria-hidden="true"></div>
 
         <div class="container hero-container">
       
           <div class="hero-left reveal-section">
+
+            <div class="status-pill reveal" role="status" aria-label="Currently available for new projects">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="status-text">Available for freelance projects</span>
+              <span class="status-divider" aria-hidden="true">&middot;</span>
+              <span class="status-time" id="liveTime" aria-label="Local time in Lagos">
+                <!-- Populated by JS; falls back to nothing if JS disabled -->
+              </span>
+            </div>
       
-            <p class="hero-intro reveal">Front End Web Developer</p>
+            <p class="hero-intro reveal">
+              Front End Web Developer building
+              <span class="word-cycle" aria-live="polite">
+                <span class="word-cycle-item is-active">interfaces</span>
+                <span class="word-cycle-item">experiences</span>
+                <span class="word-cycle-item">products</span>
+                <span class="word-cycle-item">systems</span>
+              </span>
+            </p>
       
-            <h1 class="hero-name">
+            <h1 class="hero-name" id="hero-name">
               <span class="reveal">Emmanuel</span><br>
               <span class="reveal onyekachi">Onyekachi</span>
             </h1>
       
             <p class="hero-description reveal">
-              I am a Nigerian-based Front-end Web Developer with a bachelor's in Materials 
-              and Metallurgical Engineering.
-              I design and build modern, fully responsive, high-performance web experiences 
+              I design and build modern, fully responsive, high-performance web experiences &mdash;
               engineered with clean architecture, refined motion, and precise attention to detail.
+              An engineering background trained me to think in systems; I now use that thinking to
+              ship interfaces that feel effortless to use and easy to grow.
             </p>
       
             <div class="hero-buttons reveal">
-              <a href="#projects" class="btn-primary">View Projects</a>
-              <a href="#contact" class="btn-outline">Contact Me</a>
+              <a href="#projects" class="btn-primary">View Selected Work</a>
+              <a href="#contact" class="btn-outline">Start a Project</a>
             </div>
       
           </div>
@@ -141,12 +265,12 @@
         <div class="container about-container">
       
             <div class="about-left">
-                <h2>About</h2>
+                <h2><span class="section-num">01.</span> About</h2>
             </div>
 
             <div class="about-right">
                 <p>
-                  I build structured, performance-focused web interfaces designed to feel effortless and precise.
+                  I'm a Nigerian-based Front End Developer who builds structured, performance-focused web interfaces designed to feel effortless and precise.
                 </p>
               
                 <p>
@@ -154,7 +278,7 @@
                 </p>
               
                 <p>
-                  Every project I work on is treated as a product — engineered for clarity, speed, and long-term scalability.
+                  My background is in Materials and Metallurgical Engineering &mdash; a field that taught me to think about how systems hold up under pressure. I treat every interface I build the same way: engineered for clarity, speed, and long-term scalability.
                 </p>
               
                 <div class="principles">
@@ -170,48 +294,103 @@
 
 
 
-    <section class="section services reveal-section" id="services">
+    <section class="section skills reveal-section" id="skills">
         <div class="container">
-      
-          <div class="services-header">
-            <h2>Services</h2>
+
+          <div class="section-header">
+            <h2><span class="section-num">02.</span> Skills &amp; Stack</h2>
             <p>
-              Focused capabilities designed to deliver structured, scalable, and performance-driven interfaces.
+              An honest map of the tools I build with, the ones I'm actively learning, and where I'm headed.
+              I believe in showing where I am rather than pretending to be everywhere.
             </p>
           </div>
-      
-          <div class="services-grid">
-      
-            <div class="service-card">
-              <h3>Custom Frontend Development</h3>
-              <p>
-                Responsive, high-performance interfaces built with clean architecture and modern best practices.
-              </p>
+
+          <div class="skills-grid">
+
+            <div class="skill-column">
+              <div class="skill-column-header">
+                <span class="skill-tag-label">Currently building with</span>
+                <h3>Production Stack</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-meta">Semantic, accessible markup</span>
+                </li>
+                <li>
+                  <span class="skill-name">CSS3</span>
+                  <span class="skill-meta">Modern layouts, custom animations, responsive design</span>
+                </li>
+                <li>
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-meta">Vanilla JS, DOM manipulation, intersection observers, modular logic</span>
+                </li>
+                <li>
+                  <span class="skill-name">Performance &amp; SEO</span>
+                  <span class="skill-meta">Optimized assets, Lighthouse-aware builds, Open Graph &amp; structured data</span>
+                </li>
+                <li>
+                  <span class="skill-name">Accessibility</span>
+                  <span class="skill-meta">WCAG-aware, keyboard nav, ARIA semantics</span>
+                </li>
+              </ul>
             </div>
-      
-            <div class="service-card">
-              <h3>UI Implementation</h3>
-              <p>
-                Pixel-accurate translation of Figma or design systems into accessible, production-ready code.
-              </p>
+
+            <div class="skill-column">
+              <div class="skill-column-header">
+                <span class="skill-tag-label skill-tag-learning">Currently learning</span>
+                <h3>Next Stack</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <span class="skill-name">React</span>
+                  <span class="skill-meta">Component architecture, hooks, state management</span>
+                </li>
+                <li>
+                  <span class="skill-name">Tailwind CSS</span>
+                  <span class="skill-meta">Utility-first styling at scale</span>
+                </li>
+                <li>
+                  <span class="skill-name">Sass / SCSS</span>
+                  <span class="skill-meta">Structured styling, mixins, maintainable CSS</span>
+                </li>
+                <li>
+                  <span class="skill-name">Next.js</span>
+                  <span class="skill-meta">Server-rendered React for production sites</span>
+                </li>
+                <li>
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-meta">Version control, branches, collaborative workflows</span>
+                </li>
+              </ul>
             </div>
-      
-            <div class="service-card">
-              <h3>Performance Optimization</h3>
-              <p>
-                Refining load speed, rendering efficiency, and structural integrity for long-term scalability.
-              </p>
+
+            <div class="skill-column">
+              <div class="skill-column-header">
+                <span class="skill-tag-label skill-tag-future">Working toward</span>
+                <h3>Full Stack</h3>
+              </div>
+              <ul class="skill-list">
+                <li>
+                  <span class="skill-name">Backend Development</span>
+                  <span class="skill-meta">Server logic, APIs, database design</span>
+                </li>
+                <li>
+                  <span class="skill-name">Authentication &amp; Data</span>
+                  <span class="skill-meta">Real user systems, secure flows, persistence</span>
+                </li>
+                <li>
+                  <span class="skill-name">Deployment &amp; DevOps basics</span>
+                  <span class="skill-meta">CI/CD, hosting, environment management</span>
+                </li>
+                <li class="skill-note">
+                  <em>Goal: ship full-stack products end-to-end &mdash; from interface to database &mdash; without handing off the back half.</em>
+                </li>
+              </ul>
             </div>
-      
-            <div class="service-card">
-              <h3>Interface Refinement</h3>
-              <p>
-                Enhancing existing products through motion polish, spacing discipline, and UI clarity.
-              </p>
-            </div>
-      
+
           </div>
-      
+
         </div>
     </section>
 
@@ -220,191 +399,589 @@
     <section class="section projects reveal-section" id="projects">
         <div class="container">
       
-            <div class="projects-header">
-                <h2>Selected Work</h2>
+            <div class="section-header">
+                <h2><span class="section-num">03.</span> Selected Work</h2>
                 <p>
-                A selection of projects demonstrating structured frontend architecture,
-                performance awareness, and refined interface execution.
+                Self-initiated demo projects designed to demonstrate structured frontend architecture,
+                performance awareness, and refined interface execution &mdash; built end-to-end with HTML, CSS, and JavaScript.
                 </p>
             </div>
-        
-            <div class="projects-grid">
-        
-                <!-- PROJECT CARD 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.11.17.jpg" alt="Project One" class="preview-image">
-                        <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.12.01.jpg" alt="Project One" class="preview-image">
-                        <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.12.14.jpg" alt="Project One" class="preview-image">
+
+
+            <!-- ============================================
+                 CASE STUDY 1 — Lumière Restaurant
+                 Lead with this one. The booking-system challenge
+                 is the strongest single technical story Emmanuel has.
+            ============================================= -->
+            <article class="case-study">
+
+                <header class="case-study-header">
+                    <div class="case-study-meta">
+                        <span class="case-study-num">01</span>
+                        <span class="case-study-tag">Hospitality &middot; Brand simulation &middot; Self-initiated</span>
                     </div>
-        
-                    <div class="project-content">
-                        <h3>Luxury Real Estate Platform</h3>
-                        <p>
-                        High-end responsive interface with refined motion and structured layout system.
-                        </p>
-            
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-            
-                        <div class="project-links">
-                            <a href="#" target="_blank">Live</a>
-                            <a href="#" target="_blank">Code</a>
-                        </div>
+                    <h3 class="case-study-title">Lumi&egrave;re &mdash; A Two-Michelin-Star Brand World</h3>
+                    <p class="case-study-summary">
+                        Not a restaurant page &mdash; a complete brand simulation. A multi-page experience for a fictional two-Michelin-star Paris restaurant,
+                        engineered with the depth of a real client build: a full menu system, a reservation flow, three signature experience tiers, and the
+                        kind of editorial polish that a real luxury hospitality brand would actually ship.
+                    </p>
+                </header>
+
+                <div class="case-study-gallery">
+                    <img src="images/lumiere-restaurant/lumiere-restaurant1.png" alt="Lumi&egrave;re homepage with cinematic dining room hero and reservation CTA" class="preview-image">
+                    <img src="images/lumiere-restaurant/lumiere-restaurant2.png" alt="Lumi&egrave;re menu system with category tabs and signature dishes" class="preview-image">
+                    <img src="images/lumiere-restaurant/lumiere-restaurant3.png" alt="Lumi&egrave;re reservation and visit experience" class="preview-image">
+                </div>
+
+                <div class="case-study-stats">
+                    <div class="case-stat">
+                        <span class="case-stat-num">3</span>
+                        <span class="case-stat-label">Pages built<br>(home, reservation, legal)</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-num">8</span>
+                        <span class="case-stat-label">Menu categories<br>with filterable views</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-num">3</span>
+                        <span class="case-stat-label">Experience tiers<br>with deep-link routing</span>
+                    </div>
+                    <div class="case-stat">
+                        <span class="case-stat-num">100%</span>
+                        <span class="case-stat-label">Built without<br>a single backend call</span>
                     </div>
                 </div>
 
+                <div class="case-study-body">
 
-                <!-- PROJECT CARD 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/lumiere-restaurant/lumiere-restaurant1.png" alt="Project Two" class="preview-image">
-                        <img src="images/lumiere-restaurant/lumiere-restaurant2.png" alt="Project Two" class="preview-image">
-                        <img src="images/lumiere-restaurant/lumiere-restaurant3.png" alt="Project Two" class="preview-image">
-                    </div>
-            
-                    <div class="project-content">
-                        <h3>Signature Dining Experience</h3>
+                    <div class="case-study-block">
+                        <h4>The Brief</h4>
                         <p>
-                            A refined, brand-focused restaurant interface designed to capture atmosphere, 
-                            elevate presentation, and create a seamless reservation journey across devices.
+                            A self-initiated brand build with one rule: don't make a "demo." Build it like a real two-Michelin-star Paris restaurant
+                            would build it &mdash; full menu, full reservation flow, full editorial story, full press coverage panel, real opening hours,
+                            real address, real recognition badges. If a hospitality group dropped their content in tomorrow, the site should be ready to ship.
                         </p>
-                
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                
-                        <div class="project-links">
-                            <a href="https://emmanuelonyeka.github.io/lumiere-restaurant/" target="_blank">Live</a>
-                            <a href="#" target="_blank">Code</a>
-                        </div>
                     </div>
+
+                    <div class="case-study-block">
+                        <h4>The Challenge</h4>
+                        <p>
+                            The reservation system. Every other section is a styling and content problem &mdash; the booking is an <em>engineering</em> problem.
+                            A real reservation flow needs a database to hold availability, server logic to validate party sizes against table capacity, and
+                            an API to commit the booking. I had none of those. The flow still had to <em>feel</em> real: take the date, the party size, the
+                            time slot, and respond with the confidence of a system that knows what's actually available.
+                        </p>
+                        <p>
+                            I spent over <strong>48 hours drafting the logic on paper</strong> before writing a line of code &mdash; mapping every state
+                            the booking could be in, every edge case (party size vs. table capacity, lead time windows, blackout dates, the 15-minute
+                            grace period before the table releases), and how each field should react to changes in the others. By the time I started
+                            coding, I knew exactly what I was building.
+                        </p>
+                    </div>
+
+                    <div class="case-study-block">
+                        <h4>The Approach</h4>
+                        <p>
+                            A pure-JavaScript state machine driving the reservation form, with availability rules in a config object that mimics what a
+                            real restaurant manager would enter: opening hours, table-size buckets, time-slot intervals, blackout dates. The form validates
+                            progressively, surfaces errors inline, and updates available slots live as the user changes inputs &mdash; the same UX patterns
+                            a backend-driven booking would use, just with the rules running locally.
+                        </p>
+                        <p>
+                            The menu system is its own piece of architecture: <strong>eight filterable categories</strong> (Starters through Wines &amp;
+                            Champagne), each with dietary tags (V/VE/GF), category-aware images, EUR pricing, and a "Show All" master view. The three
+                            signature experiences (Tasting Menu / Wine Pairing / Private Dining) deep-link straight into the reservation page with
+                            URL parameters &mdash; <code>?experience=tasting#booking</code> &mdash; so the user lands pre-routed to the right flow.
+                        </p>
+                        <p>
+                            Brand-wise: a candle-lit palette, a single distinctive serif for the wordmark, motion timed to feel weighted rather than eager
+                            &mdash; the way a ma&icirc;tre d' moves, not a notification. A complete fictional press world (Michelin badges, World's 50 Best ranking,
+                            full chef biography, NYT-style editorial pull-quote) built with the same attention to detail a real luxury brand would demand.
+                        </p>
+                    </div>
+
+                    <div class="case-study-block case-study-stack">
+                        <h4>Built with</h4>
+                        <ul>
+                            <li>HTML5 &mdash; semantic structure, full SEO &amp; Open Graph metadata, schema-aware</li>
+                            <li>CSS3 &mdash; multi-page design system, custom animations, responsive across all breakpoints</li>
+                            <li>JavaScript &mdash; state machine, form validation, menu filtering, deep-link routing, gallery filters</li>
+                            <li>Multi-page architecture &mdash; <code>index.html</code>, <code>reservation.html</code>, <code>legal.html</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-block">
+                        <h4>What I learned</h4>
+                        <p>
+                            That two days of thinking saves two weeks of rewriting. The booking system shipped close to first draft because the logic was
+                            settled before the code started. It's a discipline I now apply to every interface I build &mdash; structure on paper before
+                            structure in the editor.
+                        </p>
+                        <p>
+                            And that scope is a craft decision, not a constraint. Choosing to build the full brand world &mdash; not a stripped-down sample
+                            &mdash; is what makes this site read as something a real restaurant could deploy. Anyone can ship a homepage. Shipping the
+                            <em>system</em> is what changes the conversation.
+                        </p>
+                    </div>
+
                 </div>
 
+                <footer class="case-study-footer">
+                    <div class="case-study-links">
+                        <a href="https://emmanuelonyeka.github.io/lumiere-restaurant/index.html" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">View Live Site &rarr;</a>
+                        <a href="https://github.com/emmanuelonyeka/lumiere-restaurant" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">View Source &rarr;</a>
+                    </div>
+                </footer>
 
-                <!-- PROJECT CARD 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project1.jpg" alt="Project Three">
-                        <img src="project1.jpg" alt="Project Three">
-                        <img src="project1.jpg" alt="Project Three">
+            </article>
+
+
+            <!-- ============================================
+                 CASE STUDY 2 — PrimeNest Realty
+            ============================================= -->
+            <article class="case-study">
+
+                <header class="case-study-header">
+                    <div class="case-study-meta">
+                        <span class="case-study-num">02</span>
+                        <span class="case-study-tag">Real estate &middot; In progress &middot; Self-initiated</span>
                     </div>
-            
-                    <div class="project-content">
-                        <h3>Structured Workflow Platform</h3>
-                        <p>
-                            A modern SaaS landing experience built with conversion-focused hierarchy, 
-                            scalable component architecture, and clear feature communication.
-                        </p>
-                
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                
-                        <div class="project-links">
-                            <a href="#" target="_blank">Live</a>
-                            <a href="#" target="_blank">Code</a>
-                        </div>
-                    </div>
+                    <h3 class="case-study-title">PrimeNest Realty &mdash; Luxury Property Platform</h3>
+                    <p class="case-study-summary">
+                        A high-end real estate interface focused on confident hierarchy, structured property discovery, and the kind of trust signals
+                        Nigerian buyers look for when shopping at the upper end of the market.
+                    </p>
+                </header>
+
+                <div class="case-study-gallery">
+                    <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.11.17.jpg" alt="PrimeNest Realty homepage with luxury home hero and property search bar" class="preview-image">
+                    <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.12.01.jpg" alt="PrimeNest Realty featured properties grid" class="preview-image">
+                    <img src="images/Real_Estate/Screenshot 2026-02-25 at 09.12.14.jpg" alt="PrimeNest Realty property detail and contact section" class="preview-image">
                 </div>
-        
-            </div>
-      
+
+                <div class="case-study-body">
+
+                    <div class="case-study-block">
+                        <h4>The Brief</h4>
+                        <p>
+                            A self-initiated demo aimed at the Nigerian luxury property market. The goal: an interface that signals premium
+                            on the first impression &mdash; before the visitor reads a word &mdash; and gives them an obvious next action whether
+                            they're buying, renting, or shopping for a short let.
+                        </p>
+                    </div>
+
+                    <div class="case-study-block">
+                        <h4>The Challenge</h4>
+                        <p>
+                            Real estate sites tend to drown buyers in filters. The risk was building yet another search form that feels like
+                            a tax return. I needed the property search to feel like a concierge &mdash; quick to scan, obvious where to start,
+                            confident in what it surfaces &mdash; without sacrificing the filtering depth a real listing site needs.
+                        </p>
+                    </div>
+
+                    <div class="case-study-block">
+                        <h4>The Approach</h4>
+                        <p>
+                            A three-tab search bar (Buy / Rent / Short Let) sits floating just below the hero, half-overlapping it &mdash;
+                            visually saying "start here" before the user has to think. Each tab loads the right filter set without a page jump.
+                            Featured properties below are presented as confident editorial cards, not a dense grid, to keep the premium tone consistent.
+                        </p>
+                        <p>
+                            Color-wise, a deep navy and warm gold pairing &mdash; conservative, trust-forward, not trendy. The kind of palette
+                            that ages well across rebrands.
+                        </p>
+                    </div>
+
+                    <div class="case-study-block case-study-stack">
+                        <h4>Built with</h4>
+                        <ul>
+                            <li>HTML5 &mdash; semantic structure for SEO and accessibility</li>
+                            <li>CSS3 &mdash; custom layouts, hover states, mobile-first responsive</li>
+                            <li>JavaScript &mdash; tab switching, filter logic, smooth scroll</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-block">
+                        <h4>What I learned</h4>
+                        <p>
+                            That confident hierarchy beats clever features. Removing options and trusting one clear path through the page
+                            made the site feel more capable, not less. I now design every layout around the question: "what's the one thing
+                            this visitor should do next?"
+                        </p>
+                    </div>
+
+                </div>
+
+                <footer class="case-study-footer">
+                    <div class="case-study-links case-study-links-pending">
+                        <span class="coming-soon-badge" role="status" aria-label="This project is in active development">
+                            <span class="coming-soon-dot" aria-hidden="true"></span>
+                            <span class="coming-soon-text">In active development &mdash; live site &amp; source coming soon</span>
+                        </span>
+                    </div>
+                </footer>
+
+            </article>
+
         </div>
     </section>
 
+
+    <!-- ============================================
+         PROCESS — How I Work
+         The conversion-driving section. Tells a non-technical
+         client "this person has a system, not just talent."
+    ============================================= -->
+    <section class="section process reveal-section" id="process">
+        <div class="container">
+
+            <div class="section-header">
+                <h2><span class="section-num">04.</span> How I Work</h2>
+                <p>
+                    A simple, honest process. No jargon, no surprise milestones &mdash; you'll always know
+                    exactly where your project is and what's coming next.
+                </p>
+            </div>
+
+            <ol class="process-steps">
+
+                <li class="process-step">
+                    <div class="process-step-num">01</div>
+                    <div class="process-step-body">
+                        <h3>Discovery</h3>
+                        <p>
+                            We talk through what you're building, who it's for, and what success looks like &mdash;
+                            usually in a 30&ndash;45 minute call. By the end, we both know the scope, the timeline, and the price.
+                            No fixed proposals before I understand the work.
+                        </p>
+                        <span class="process-deliverable">You get: written project brief &amp; quote</span>
+                    </div>
+                </li>
+
+                <li class="process-step">
+                    <div class="process-step-num">02</div>
+                    <div class="process-step-body">
+                        <h3>Design Direction</h3>
+                        <p>
+                            Before I write code, I lock the visual direction &mdash; layout, type, color, motion language.
+                            You see one or two design directions and pick. Iterating in design is cheap; iterating after build is expensive.
+                        </p>
+                        <span class="process-deliverable">You get: design references &amp; key screen mockups</span>
+                    </div>
+                </li>
+
+                <li class="process-step">
+                    <div class="process-step-num">03</div>
+                    <div class="process-step-body">
+                        <h3>Build</h3>
+                        <p>
+                            I build in clean, structured stages with a shared preview link you can check at any time.
+                            Performance, accessibility, and SEO are baked in &mdash; not bolted on at the end.
+                            Two rounds of revisions are included so you can shape the result without surprise costs.
+                        </p>
+                        <span class="process-deliverable">You get: live preview link, updated as I work</span>
+                    </div>
+                </li>
+
+                <li class="process-step">
+                    <div class="process-step-num">04</div>
+                    <div class="process-step-body">
+                        <h3>Launch &amp; Handover</h3>
+                        <p>
+                            We deploy to your domain, hook up analytics, and run final checks across devices.
+                            You get the full source, a short walkthrough of how to update content, and (depending on the package)
+                            up to 30 days of post-launch support for anything that comes up.
+                        </p>
+                        <span class="process-deliverable">You get: live site, source code, content guide</span>
+                    </div>
+                </li>
+
+            </ol>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         WHAT I BELIEVE — replaces testimonials slot
+         until real testimonials exist. Drawn from the
+         user's own words about consistency and craft.
+    ============================================= -->
+    <section class="section beliefs reveal-section" id="beliefs">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>What I Believe</h2>
+                <p>
+                    A few principles that shape how I work &mdash; and what you can expect when we build something together.
+                </p>
+            </div>
+
+            <div class="beliefs-grid">
+
+                <div class="belief-card">
+                    <span class="belief-num" aria-hidden="true">01</span>
+                    <h3>Consistency over talent</h3>
+                    <p>
+                        I'm building this entire portfolio with HTML, CSS, and JavaScript &mdash;
+                        not because I think those are the only tools that matter, but because I believe in being
+                        excellent with what you have before reaching for what's next. Showing up daily beats showing off occasionally.
+                    </p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-num" aria-hidden="true">02</span>
+                    <h3>Think before you type</h3>
+                    <p>
+                        The best engineering happens on paper. I spent two days planning the Lumi&egrave;re booking system before
+                        writing a line of code &mdash; and it shipped close to first draft. Slow planning makes fast execution.
+                    </p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-num" aria-hidden="true">03</span>
+                    <h3>Craft is in the details</h3>
+                    <p>
+                        Anyone can ship a site that works. The difference between a working site and a memorable one
+                        lives in the small things: a hover state that feels considered, motion that respects the user, spacing
+                        that breathes. I obsess over those.
+                    </p>
+                </div>
+
+                <div class="belief-card">
+                    <span class="belief-num" aria-hidden="true">04</span>
+                    <h3>Honest scope, honest price</h3>
+                    <p>
+                        I'd rather quote you a real number for real work than win the project on a vague promise and
+                        invoice you twice. If something is outside scope, I'll say so. If it's inside scope, it's done.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         PRICING — three packages, USD primary
+         Names: Essential / Professional / Signature
+         Suggested ranges, middle tier marked as "most popular"
+         to anchor decision-making.
+    ============================================= -->
+    <section class="section pricing reveal-section" id="pricing">
+        <div class="container">
+
+            <div class="section-header">
+                <h2><span class="section-num">05.</span> Pricing</h2>
+                <p>
+                    Transparent packages so you know what to expect before we talk. Every package is fixed-scope and fixed-price &mdash;
+                    no hourly billing surprises. Naira pricing available on request for Nigerian-based clients.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3>Essential</h3>
+                        <p class="pricing-tagline">For founders who need a confident first web presence.</p>
+                        <div class="pricing-price">
+                            <span class="pricing-from">From</span>
+                            <span class="pricing-amount">$300</span>
+                        </div>
+                        <p class="pricing-timeline">~ 1 week delivery</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Single-page responsive site</li>
+                        <li>Mobile-first build, all devices</li>
+                        <li>Basic SEO &amp; meta tags</li>
+                        <li>1 round of revisions</li>
+                        <li>Source code &amp; deployment</li>
+                    </ul>
+                    <a href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%27m%20interested%20in%20the%20Essential%20package." target="_blank" rel="noopener noreferrer" class="btn-outline btn-block">Start Essential &rarr;</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">Most popular</div>
+                    <div class="pricing-card-header">
+                        <h3>Professional</h3>
+                        <p class="pricing-tagline">For serious businesses ready to look the part online.</p>
+                        <div class="pricing-price">
+                            <span class="pricing-from">From</span>
+                            <span class="pricing-amount">$700</span>
+                        </div>
+                        <p class="pricing-timeline">~ 2 weeks delivery</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Multi-section site (like the demos above)</li>
+                        <li>Performance optimization &amp; Lighthouse pass</li>
+                        <li>Full SEO + Open Graph + structured data</li>
+                        <li>Custom animations &amp; motion design</li>
+                        <li>2 rounds of revisions</li>
+                        <li>Source code &amp; deployment</li>
+                    </ul>
+                    <a href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%27m%20interested%20in%20the%20Professional%20package." target="_blank" rel="noopener noreferrer" class="btn-primary btn-block">Start Professional &rarr;</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3>Signature</h3>
+                        <p class="pricing-tagline">For brands that want every detail engineered to taste.</p>
+                        <div class="pricing-price">
+                            <span class="pricing-from">From</span>
+                            <span class="pricing-amount">$1,500</span>
+                        </div>
+                        <p class="pricing-timeline">Priority delivery</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Professional</li>
+                        <li>Custom domain setup &amp; email forwarding</li>
+                        <li>Google Analytics &amp; conversion tracking</li>
+                        <li>Working contact form integration</li>
+                        <li>30 days of post-launch support</li>
+                        <li>Priority queue placement</li>
+                    </ul>
+                    <a href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%27m%20interested%20in%20the%20Signature%20package." target="_blank" rel="noopener noreferrer" class="btn-outline btn-block">Start Signature &rarr;</a>
+                </div>
+
+            </div>
+
+            <p class="pricing-note">
+                Need something outside these packages? <a href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%27d%20like%20to%20discuss%20a%20custom%20project." target="_blank" rel="noopener noreferrer">Tell me about your project</a> and I'll send a custom quote.
+            </p>
+
+        </div>
+    </section>
 
 
     <section class="section contact reveal-section" id="contact">
-        <div class="container contact-container">
-      
-          <div class="contact-left">
-            <h2>Contact</h2>
-            <p>
-              If you're building something meaningful and need a structured frontend engineer,
-              I’d be glad to collaborate.
+        <div class="container">
+
+          <div class="contact-hero">
+            <span class="contact-eyebrow">06. Contact</span>
+            <h2 class="contact-headline">
+                Let's build something<br>
+                <span class="contact-accent">worth shipping.</span>
+            </h2>
+            <p class="contact-lead">
+                Whether you have a fully scoped brief or just a rough idea, the fastest way to start is a quick WhatsApp message.
+                I read every one and respond within 24 hours.
+            </p>
+
+            <a href="https://wa.me/2348169269415?text=Hi%20Emmanuel%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-primary btn-large contact-primary-cta">
+                <svg viewBox="0 0 24 24" class="whatsapp-icon" fill="currentColor" aria-hidden="true" width="22" height="22">
+                    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20zm4.48-5.69c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.57.12-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.1-.5.1-.1.25-.27.37-.4.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
+                </svg>
+                Message me on WhatsApp
+            </a>
+
+            <p class="contact-response-time">
+                <span class="contact-response-dot" aria-hidden="true"></span>
+                Typically responds in under 24 hours
             </p>
           </div>
-      
-          <div class="contact-right">
 
-              <a href="mailto:emmanuelymb@email.com" class="contact-link">
-                  <span class="icon">
-                    <!-- Email Icon -->
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M2 4h20v16H2V4zm10 9l10-7H2l10 7zm0 2L2 8v10h20V8l-10 7z"/>
-                    </svg>
-                  </span>
-                  emmanuelymb@email.com
-              </a>
-            
-              <a href="#" target="_blank" class="contact-link">
-                  <span class="icon">
-                    <!-- GitHub -->
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
-                    </svg>
-                  </span>
-                  GitHub
-              </a>
-            
-              <a href="https://www.linkedin.com/in/emmanuelymb" target="_blank" class="contact-link">
-                  <span class="icon">
-                    <!-- LinkedIn -->
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M4.98 3.5C4.98 5 3.87 6.1 2.5 6.1S0 5 0 3.5 1.1.9 2.5.9 4.98 2 4.98 3.5zM.4 8.1h4.2V24H.4zM8.4 8.1h4v2.2h.06c.56-1 1.94-2.2 4-2.2 4.28 0 5.07 2.82 5.07 6.5V24h-4.2v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V24H8.4z"/>
-                    </svg>
-                  </span>
-                  LinkedIn
-              </a>
-            
-              <a href="https://x.com/emmmybills?s=21" target="_blank" class="contact-link">
-                  <span class="icon">
-                    <!-- X (Twitter) -->
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.9 1H22l-7.6 8.7L23 23h-6.9l-5.4-7.1L4.7 23H1.6l8.1-9.3L1 1h7l5 6.6L18.9 1z"/>
-                    </svg>
-                  </span>
-                  X (Twitter)
-              </a>
-
-              <a href="https://wa.me/2348147931141" target="_blank" class="contact-link">
-                <span class="icon">
-                  <!-- Whatsapp -->
-                  <svg viewBox="0 0 24 24" class="whatsapp-icon" fill="currentColor">
-                    <path d="M12 2a10 10 0 0 0-8.66 15l-1.34 4.9 5.02-1.32A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.07-1.1l-.29-.17-2.98.78.8-2.9-.19-.3A8 8 0 1 1 12 20zm4.48-5.69c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.57.12-.17.25-.65.82-.8.99-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.1-.5.1-.1.25-.27.37-.4.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.57-1.37-.78-1.88-.2-.48-.41-.41-.57-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/>
-                  </svg>
-                </span>
-                Whatsapp
-            </a>
-          
+          <div class="contact-secondary">
+              <p class="contact-secondary-label">Prefer something else?</p>
+              <div class="contact-secondary-links">
+                  <a href="mailto:emmanuelymb@gmail.com" class="contact-link-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
+                        <path d="M2 4h20v16H2V4zm10 9l10-7H2l10 7zm0 2L2 8v10h20V8l-10 7z"/>
+                      </svg>
+                      Email
+                  </a>
+                  <a href="https://www.linkedin.com/in/emmanuelymb" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
+                        <path d="M4.98 3.5C4.98 5 3.87 6.1 2.5 6.1S0 5 0 3.5 1.1.9 2.5.9 4.98 2 4.98 3.5zM.4 8.1h4.2V24H.4zM8.4 8.1h4v2.2h.06c.56-1 1.94-2.2 4-2.2 4.28 0 5.07 2.82 5.07 6.5V24h-4.2v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V24H8.4z"/>
+                      </svg>
+                      LinkedIn
+                  </a>
+                  <a href="https://x.com/emmmybills?s=21" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
+                        <path d="M18.9 1H22l-7.6 8.7L23 23h-6.9l-5.4-7.1L4.7 23H1.6l8.1-9.3L1 1h7l5 6.6L18.9 1z"/>
+                      </svg>
+                      X / Twitter
+                  </a>
+                  <a href="https://github.com/emmanuelonyeka" target="_blank" rel="noopener noreferrer" class="contact-link-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.74 1.26 3.4.97.1-.75.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.5 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.74.82 1.2 1.86 1.2 3.14 0 4.52-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.17v3.22c0 .31.2.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                      </svg>
+                      GitHub
+                  </a>
+              </div>
           </div>
-      
+
         </div>
     </section>
 
 
+    </main>
 
 
     <footer class="footer">
         <div class="container footer-container">
-          <p>© 2026 Emmanuel Onyekachi</p>
-          <p>Built with HTML, CSS & JavaScript</p>
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="curly">{</span><span class="e-logo">E</span><span class="curly">}</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Front End Developer building modern, fully responsive web experiences.
+                        Based in Nigeria, working worldwide.
+                    </p>
+                    <div class="footer-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Available for new projects
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Sections</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Selected Work</a></li>
+                        <li><a href="#process">How I Work</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://wa.me/2348169269415" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="mailto:emmanuelymb@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/emmanuelymb" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://x.com/emmmybills?s=21" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                        <li><a href="https://github.com/emmanuelonyeka" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="Emmanuel-Onyekachi-Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Emmanuel Onyekachi. All rights reserved.</p>
+                <p class="footer-built">
+                    Designed &amp; built by Emmanuel &mdash;
+                    <a href="https://github.com/emmanuelonyeka/portfolio" target="_blank" rel="noopener noreferrer">view source</a>
+                </p>
+            </div>
+
         </div>
     </footer>
 
 
     <!-- IMAGE PREVIEW MODAL -->
-    <div class="image-modal" id="imageModal">
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Project image preview" aria-hidden="true">
+      <button class="image-modal-close" id="imageModalClose" type="button" aria-label="Close image preview">&times;</button>
       <div class="image-modal-content">
-        <img src="" alt="Preview" id="modalImage">
+        <img src="" alt="" id="modalImage">
       </div>
     </div>
 

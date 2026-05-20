@@ -1,0 +1,16 @@
+{
+  "name": "Emmanuel Onyekachi — Front End Developer",
+  "short_name": "Emmanuel O.",
+  "description": "Portfolio of Emmanuel Onyekachi, Front End Web Developer",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0f1117",
+  "background_color": "#0f1117",
+  "display": "minimal-ui",
+  "start_url": "/"
+}
